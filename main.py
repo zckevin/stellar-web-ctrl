@@ -87,6 +87,7 @@ class MyPlugin(StellarPlayer.IStellarPlayerPlugin):
         super().stop()
 
     def webserverThread(self):
+        """
         @get('/')
         def index():
             f = open(f'{plugin_dir}/templates/index.html', 'rb')
@@ -147,8 +148,14 @@ class MyPlugin(StellarPlayer.IStellarPlayerPlugin):
         
         if not _template_dir in TEMPLATE_PATH:
             TEMPLATE_PATH.append(_template_dir)
+        """
+        @post('/play_url')
+        def play_url():
+            url = request.forms.get('url')
+            self.player.play(url)
+            return f''
 
-        run(host='0.0.0.0', port=0, server=ss.WSGIRefServer)
+        run(host='0.0.0.0', port=28080, server=ss.WSGIRefServer)
 
    
            

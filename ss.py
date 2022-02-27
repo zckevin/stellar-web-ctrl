@@ -51,13 +51,13 @@ class WSGIRefServer(ServerAdapter):
         # 此处获取到随机端口
         url = f'http://{get_host_ip()}:{self.port}'
         print(url)
-        img = qrcode.make(url, image_factory=PymagingImage)
-        f = open(f'qr_{os.getpid()}.png', 'wb')
-        img.save(f)
-        f.close()
-        f = open(f'qr_{os.getpid()}.txt', 'w')
-        f.write(url)
-        f.close()
+        # img = qrcode.make(url, image_factory=PymagingImage)
+        # f = open(f'qr_{os.getpid()}.png', 'wb')
+        # img.save(f)
+        # f.close()
+        # f = open(f'qr_{os.getpid()}.txt', 'w')
+        # f.write(url)
+        # f.close()
 
         try:
             self.srv.serve_forever()
