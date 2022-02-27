@@ -1,5 +1,20 @@
-# stellar-web-ctrl
+# webtorrent-stellarplayer-plugin
 
-遥控器 - 使用手机控制播放器
+Export control endpoint through web api.
 
-![Kiku](images/page.png)
+## Web API
+
+### /play_url
+
+Default binding port: 28080
+
+method: POST, using HTTP form data, "application/x-www-form-urlencoded"
+
+"""
+{
+  url: "http://..."
+}
+"""
+
+
+
