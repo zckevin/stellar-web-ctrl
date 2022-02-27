@@ -6,15 +6,16 @@ Export control endpoint through web api.
 
 ### /play_url
 
-Default binding port: 28080
+play video with HTTP url
 
-method: POST, using HTTP form data, "application/x-www-form-urlencoded"
+method: POST
 
-"""
+using HTTP form data, "application/x-www-form-urlencoded"
+
+```JavaScript
 {
   url: "http://..."
 }
-"""
+```
 
-
-
+## Default binding port: 28080
